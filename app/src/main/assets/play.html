@@ -1,0 +1,32 @@
+
+<div data-ng-init="initialize()" class="row play">
+  <div class="top">
+    <div class="pause"><i data-ng-click="togglePause()" data-ng-class="{'fa-pause': !pause, 'fa-play': pause}" class="fa"></i></div>
+    <div class="time"><i class="fa fa-clock-o"></i><span>{{countDown}}</span></div>
+  </div>
+  <div data-ng-hide="pause" class="large-12 columns word">
+    <ul class="word">
+      <li data-ng-repeat="item in hidden" class="item"><span data-ng-if="item.hidden" class="char">&middot;</span><span data-ng-if="!item.hidden" class="char">{{item.char}}</span></li>
+    </ul>
+  </div>
+  <div data-ng-show="pause" class="large-12 columns pause-screen"><span>PAUSE</span></div>
+  <div data-ng-hide="pause" class="large-12 columns keyboard">
+    <button data-ng-repeat="key in keys" data-ng-click="digest(key)" data-ng-disabled="key.status || gameover" data-ng-class="{correct: key.status === 1, wrong: key.status === 2}" class="button radius tiny secondary">{{key.char}}</button>
+  </div>
+  <footer>
+    <div data-ng-show="gameover" class="action">
+      <button data-ng-click="initialize()" class="bottom">New Game</button>
+    </div>
+    <div data-ng-hide="gameover" class="status">
+      <rating data-ng-model="chances"></rating>
+    </div>
+  </footer>
+  <div data-ng-show="gameover" class="message">
+    <div data-ng-show="win" class="win">
+      <h1>GOOD JOB!</h1>
+    </div>
+    <div data-ng-show="!win" class="loose">
+      <h1>Try it again!</h1>
+    </div>
+  </div>
+</div>

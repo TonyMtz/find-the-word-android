@@ -1,0 +1,43 @@
+
+<!-- Web Application--><!DOCTYPE html>
+<!--if IE 8<html class="lt-ie9">
+-->
+<!-- [if gt IE 8] <!-->
+<html lang="en" data-ng-app="hangman">
+  <!-- <![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>{{title}}</title><!-- vendors:css -->
+    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/foundation/css/normalize.css">
+    <link rel="stylesheet" href="lib/foundation/css/foundation.css">
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endinject -->
+  </head>
+  <body>
+    <section id="app" ui-view=""></section><!-- vendors:js -->
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lib/angular-translate/angular-translate.min.js"></script>
+    <script src="lib/foundation/js/vendor/modernizr.js"></script>
+    <script src="lib/foundation/js/foundation.min.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="js/app.js"></script>
+    <script src="js/services/words.js"></script>
+    <script src="js/directives/word.js"></script>
+    <script src="js/directives/rating.js"></script>
+    <script src="js/directives/matchWith.js"></script>
+    <script src="js/directives/health.js"></script>
+    <script src="js/directives/focus.js"></script>
+    <script src="js/controllers/play.js"></script>
+    <script src="js/controllers/home.js"></script>
+    <script src="js/app.routes.js"></script>
+    <script src="js/app.bootstrap.js"></script>
+    <!-- endinject -->
+  </body>
+</html>
