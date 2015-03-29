@@ -2,7 +2,7 @@
 body{background:#212125;border:none;font-family:Droid Sans Mono}
 #app{height:100%}
 #app .home{background:#212125;height:100%;text-align:center}
-#app .home .title{color:#fff;font-size:3rem;font-weight:900;height:6rem;line-height:6rem;margin:0}
+#app .home .title{color:#fff;font-size:3rem;font-weight:900;height:6rem;line-height:6rem;margin:0;text-transform:uppercase}
 #app .home ul.categories{height:calc(100% - 6rem);margin:0;overflow:auto;position:absolute;text-align:center}
 #app .home ul.categories li.category{color:#fff;display:inline-block;font-size:3rem;list-style:none;margin-bottom:.5rem;width:100%}
 #app .home ul.categories li.category:last-child{margin:0}
@@ -11,11 +11,12 @@ body{background:#212125;border:none;font-family:Droid Sans Mono}
 #app .home ul.categories li.category.red{background:#dc694f}
 #app .home ul.categories li.category.yellow{background:#dbb62b}
 #app .play{background:#212125;color:#fff;height:100%}
-#app .play .top{background:#000;font-size:1.5em;height:3rem;line-height:3rem}
-#app .play .top .pause{float:right;width:20%}
-#app .play .top .time{float:right;width:70%}
+#app .play .top{background:#000;font-size:1.5em;height:3rem;line-height:3rem;text-align:center}
+#app .play .top .time{float:left;width:20%}
 #app .play .top .time .fa{margin-right:.25em}
-#app .play .pause-screen{font-family:Droid Sans Mono;font-size:4rem;text-align:center;top:3rem}
+#app .play .top .category{float:left;width:65%}
+#app .play .top .pause{float:left;width:15%}
+#app .play .pause-screen{text-align:center;font-family:Droid Sans Mono;font-size:4rem;text-transform:uppercase;top:3rem}
 #app .play .pause-screen .action .button{background:#dc694f;color:#fff;font-size:1.6rem;height:100%;line-height:4rem;margin:0 0 .5rem;padding:0;text-transform:uppercase;width:100%}
 #app .play .word{top:1rem}
 #app .play .word ul{margin:0;text-align:center}

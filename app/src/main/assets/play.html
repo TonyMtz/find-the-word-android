@@ -1,17 +1,18 @@
 
 <div data-ng-init="initialize()" class="row play">
   <div class="top">
-    <div class="pause"><i data-ng-click="togglePause()" data-ng-class="{'fa-pause': !pause, 'fa-play': pause}" class="fa"></i></div>
     <div class="time"><i class="fa fa-clock-o"></i><span>{{countDown}}</span></div>
+    <div class="category"><span>{{currentCategory}}</span></div>
+    <div class="pause"><i data-ng-click="togglePause()" data-ng-class="{'fa-pause': !pause, 'fa-play': pause}" class="fa"></i></div>
   </div>
   <div data-ng-hide="pause" class="large-12 columns word">
     <ul class="word">
       <li data-ng-repeat="item in hidden" class="item"><span data-ng-if="item.hidden" class="char">&middot;</span><span data-ng-if="!item.hidden" class="char">{{item.char}}</span></li>
     </ul>
   </div>
-  <div data-ng-show="pause" class="large-12 columns pause-screen"><span>PAUSE</span>
+  <div data-ng-show="pause" class="large-12 columns pause-screen"><span>{{ 'PAUSE' | translate }}</span>
     <div class="action">
-      <button data-ng-click="goHome()" class="button">Back To Menu</button>
+      <button data-ng-click="goHome()" class="button">{{ 'BACK_TO_MENU' | translate }}</button>
     </div>
   </div>
   <div data-ng-hide="pause" data-ng-class="{'disabled': gameover}" class="large-12 columns keyboard">
@@ -24,15 +25,15 @@
   </footer>
   <div data-ng-show="gameover" class="message">
     <div data-ng-show="win" class="win">
-      <h1>GOOD JOB!</h1>
+      <h1>{{ 'YOU_WIN' | translate }}</h1>
     </div>
     <div data-ng-show="!win" class="loose">
-      <h1>You Lose!</h1>
+      <h1>{{ 'YOU_LOSE' | translate }}</h1>
     </div>
     <div class="action">
-      <button data-ng-show="win" data-ng-click="initialize()" class="button more">Next Word</button>
-      <button data-ng-show="!win" data-ng-click="initialize()" class="button continue">Try Again</button>
-      <button data-ng-click="goHome()" class="button surrender">Back To Menu</button>
+      <button data-ng-show="win" data-ng-click="initialize()" class="button more">{{ 'NEXT_WORD' | translate }}</button>
+      <button data-ng-show="!win" data-ng-click="initialize()" class="button continue">{{ 'TRY_AGAIN' | translate }}</button>
+      <button data-ng-click="goHome()" class="button surrender">{{ 'BACK_TO_MENU' | translate }}</button>
     </div>
   </div>
 </div>

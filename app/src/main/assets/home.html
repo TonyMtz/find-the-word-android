@@ -1,6 +1,6 @@
 
 <div data-ng-init="initialize()" class="home row">
-  <h1 class="title">CATEGORIES</h1>
+  <h1 class="title">{{ 'CATEGORIES' | translate }}</h1>
   <ul class="categories">
     <li data-ng-repeat="category in categories" data-ng-init="this.color = color()" data-ng-class="this.color" class="category"><span data-ng-click="setCategory(category)" class="name">{{category}}</span></li>
   </ul>
